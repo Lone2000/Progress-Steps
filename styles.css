@@ -92,16 +92,6 @@ body {
   }
 }
 
-@keyframes undoprogress {
-  0% {
-    background: skyblue;
-    width: 0px;
-  }
-  100% {
-    background: skyblue;
-  }
-}
-
 /* Buttons */
 
 .buttons {
