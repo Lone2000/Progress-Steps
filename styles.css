@@ -46,7 +46,7 @@ body {
 
 .round.active {
   animation: progress-round 2s;
-  /* This makes sure that the keyframe is persistant */
+  /* This makes sure that the keyframe is persistent */
   animation-fill-mode: forwards;
 }
 
