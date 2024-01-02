@@ -13,3 +13,79 @@ body {
   display: flex;
   align-items: center;
 }
+
+.container {
+  width: 100%;
+}
+
+.progress-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.round {
+  width: 50px;
+  height: 50px;
+  border: 2px solid black;
+  border-radius: 50%;
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.round.solid {
+  border: 2px solid skyblue;
+}
+
+.round span {
+  font-size: 1.5rem;
+}
+
+.round.active {
+  animation: progress-round 2s;
+  /* This makes sure that the keyframe is persistant */
+  animation-fill-mode: forwards;
+}
+
+@keyframes progress-round {
+  0% {
+    /* border-color: black !important; */
+    border-width: 2px;
+  }
+  100% {
+    border-color: skyblue;
+    border-width: 2px;
+  }
+}
+
+.line {
+  width: 25px;
+  height: 2px;
+  background: gray;
+  position: relative;
+  border-radius: 10px;
+}
+
+.line.active::after {
+  /* z-index: 10000; */
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 2px;
+  border-radius: 10px;
+  background: skyblue;
+  animation: progress 1s;
+}
+
+@keyframes progress {
+  0% {
+    background: skyblue;
+    width: 0px;
+  }
+  100% {
+    background: skyblue;
+  }
+}
